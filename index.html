@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title></title>
+        <script>var LANG="en"</script> 
+        <script type="text/javascript" src="js/framework7.js"></script>
+        <script type="text/javascript" src="js/webactivity.js"></script>
+        
+        <link rel="stylesheet" href="css/framework7.ios.colors.css">
+        <link rel="stylesheet" href="css/framework7.ios.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="statusbar-overlay"></div>
+        <div class="views">
+            <div class="view" id="view-main">
+                <!-- NavBar and SubNavBar-->
+                <div class="navbar">
+                    <div class="navbar-inner" data-page="about_app">
+                        <div class="left"></div>
+                        <div class="center MainNavstyle txt_font_size">Healthy Body</div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="navbar-inner cached" data-page="enter_data">
+                        <div class="left txt_font_size"></div>
+                        <div class="center MainNavstyle txt_font_size">Healthy Body</div>
+                        <div id="next-test" class="right MainNavstyle txt_font_size">Done</div>
+                    </div>
+                    <div class="navbar-inner cached" data-page="test_page">
+                        <div class="left NavStyle txt_font_size"></div>
+                        <div class="center MainNavstyle txt_font_size" >Healthy Body</div>
+                        <div class="right NavStyle txt_font_size test_question_num"></div>
+                    </div>
+                    <div class="navbar-inner cached" data-page="info_inner">
+                        <div class="left infoinner NavStyle info_page">Back</div>
+                        <div class="center info_title_inner MainNavstyle txt_font_size"></div>
+                        <div class="right NavStyle"></div>
+                    </div>
+                    <div class="navbar-inner cached" data-page="user_home">
+                        <div class="left SubNavStyle"></div>
+                        <div class="center SubNavStyle"></div>
+                        <div class="right SubNavStyle"></div>
+                        <div class="subnavbar">
+                            <div class="buttons-row" >
+                                <a href="#tab2" id='tab_2' class="button tab-link tab1pic"></a>
+                                <a href="#tab1" class="button tab-link tab2pic active"></a>
+                                <a href="#tab3" class="button tab-link tab3pic"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pages -->
+                <div class="pages navbar-through">
+                    <div class="page navbar-fixed" data-page="about_app">
+                        <div class="page-content page-background">
+                            <div id="Welcome" class="welcome txt_font_size">
+                                <script>document.write(Welcome)</script>
+                            </div>
+                            <div class="startImg"></div>
+                            <div href="#enter_data" id="start_test" class="startButton"></div>
+                        </div>
+                    </div>
+                    <div class="page cached navbar-fixed" data-page="enter_data">
+                        <div class="page-content">
+                            <form id="my-form" class="list-block txt_font_size page-background">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link smart-select txt_font_size">
+                                            <select name="gender">
+                                                <option value="Male" selected>Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title txt_font_size">Gender</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="years" readonly id="user_age" class="picker-value user_picker txt_font_size">
+                                                    <div class="picker-text txt_font_size">Age</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="cm" readonly id="user_growth"  class="picker-value txt_font_size">
+                                                    <div class="picker-text txt_font_size">Growth</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="kg" readonly id="user_weight" class="picker-value txt_font_size">
+                                                    <div class="picker-text txt_font_size">Weight</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="page cached navbar-fixed" data-page="test_page">
+                        <div class="page-content page-background">
+                            <div id="dissolve" class="item-input evanescence">
+                                <div id="test_picture" class="test_picture"></div>
+                                <div id="test_question" class="Question_block txt_font_size">Question Place</div>
+                                <div class="list-block txt_font_size answerGroup">
+                                    <div>
+                                        <div id="answer_variant_1" value="Variant_1" class="buttonTest txt_font_size">V_1</div>
+                                        <div id="answer_variant_2" value="Variant_2" class="buttonTest txt_font_size">V_2</div>
+                                        <div id="answer_variant_3" value="Variant_3" class="buttonTest txt_font_size">V_3</div>
+                                        <div id="answer_variant_4" value="Variant_4" class="buttonTest txt_font_size">V_3</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-page="user_home" class="page cached with-subnavbar">
+                        <div class="page-content">
+                            <div class="tabs">
+                                <div id="tab1" class="tab active">
+                                    <div class="content-block">
+                                        <div class="user_info_block">
+                                            <div id="bmi_count_data" class="txt_font_size"></div>
+                                            <div id="result_comments" class="txt_font_size"></div>
+                                        </div>
+                                        <div class="reset_block reset_img" id="reset_button">
+                                        </div>
+                                        
+                                        <div class="ProgBar_block_BigBlock">
+                                            <div class="ProgBar_Age_block">
+                                                    <div class="ProgBar_title txt_font_size">Your Real Age</div>
+                                                    <div class="progBar_border_outer">
+                                                        <div class="progBar_border_inner">
+                                                            <div id="ProgBar_realAge" class="ProgressBar_age"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ProgBar_img"></div>
+                                            </div>
+                                            <div class="ProgBar_Age_block">
+                                                <div class="ProgBar_title txt_font_size">Your Biometrical Age</div>
+                                                    <div class="progBar_border_outer">
+                                                        <div class="progBar_border_inner">
+                                                            <div id="ProgBar_BioAge" class="ProgressBar_BiomAge"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ProgBar_img"></div>
+                                            </div>
+                                        </div>
+                                        <div class="Circles_BigBlock">
+                                            <div class="circleblock">
+                                                <div class="circle_title txt_font_size">Your Real Age</div>
+                                                <div class="block_img_age">
+                                                    <div id="circle_user_age"class="circle_text txt_font_size">X<br>ages</div>
+                                                </div>
+                                            </div>
+                                            <div class="circleblock">
+                                                <div class="circle_title txt_font_size">Your Biometrical Age</div>
+                                                <div class="block_img_biomAge">
+                                                    <div id="circle_user_biomAge" class="circle_text txt_font_size">X<br>ages</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab">
+                                    <div class="content-block">
+                                        <div id="list-tasks" class="list-block txt_font_size"></div>
+                                    </div>
+                                </div>
+                                <div id="tab3" class="tab">
+                                    <div class="content-block">
+                                        <div class="info_menu_links">
+                                            <div data-info="0" class="info_menu_button">
+                                                <div class="info_menu_text_title txt_font_size" id="info_1">What is biological age?</div>
+                                                <div class="info_menu_txt_inner txt_font_size" id="info_1_inner"></div>
+                                            </div>
+                                            <div data-info="1" class="info_menu_button">
+                                                <div class="info_menu_text_title txt_font_size" id="info_2">What is BMI?</div>
+                                                <div class="info_menu_txt_inner txt_font_size" id="info_2_inner"></div>
+                                            </div>
+                                            <div data-info="2" class="info_menu_button">
+                                                <div class="info_menu_text_title txt_font_size" id="info_3">Real and biological age</div>
+                                                <div class="info_menu_txt_inner txt_font_size"  id="info_3_inner"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page cached navbar-fixed info_inner" id="info_inner" data-page="info_inner">
+                        <div class="page-content page-background">
+                            <div id="content_info" class="content_info">
+                                <!-- <div id="content_info_title" class="info_title"></div> -->
+                                <div id="content_info_img" class="info_img"></div>
+                                <div id="content_info_txt" class="info_txt txt_font_size"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/pickers.js"></script>
+        <script typr="text/javascript" src="js/bmi_test.js"></script>
+        <script type="text/javascript" src="js/js_1.js"></script>
+        
+    </body>
+</html>
