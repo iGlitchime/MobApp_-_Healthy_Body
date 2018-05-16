@@ -127,7 +127,6 @@ function Three_pickers_ready(){
                     }
                 }
             }
-            // console.log("resWIDTH " + resWIDTH);
             $$('#user_weight').val(resWIDTH + " kg");
             }
     });      
